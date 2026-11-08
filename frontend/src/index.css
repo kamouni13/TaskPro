@@ -1,0 +1,76 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-primary: #7655E8;
+  --color-primary-hover: #6745D5;
+  --color-accent: #38BDF8;
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+}
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #0B1020;
+  --surface: #151D32;
+  --surface-hover: #1C2740;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border: #263249;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --background: #F3F5FB;
+  --surface: #FFFFFF;
+  --surface-hover: #E9EDF7;
+  --text-primary: #172033;
+  --text-secondary: #64748B;
+  --border: #DCE2ED;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+[data-theme="light"] .text-white {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .bg-primary.text-white,
+[data-theme="light"] .bg-primary .text-white {
+  color: #FFFFFF;
+}

@@ -1,0 +1,35 @@
+﻿# Environment variables and secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies
+**/node_modules/
+**/vendor/
+
+# Build outputs
+**/dist/
+**/dist-ssr/
+**/build/
+
+# Logs and cache
+**/*.log
+**/.phpunit.cache/
+**/.phpunit.result.cache
+**/bootstrap/cache/*.php
+
+# Laravel generated files
+/backend/storage/*.key
+/backend/storage/logs/*
+!/backend/storage/logs/.gitignore
+/backend/public/storage
+
+# Local editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
